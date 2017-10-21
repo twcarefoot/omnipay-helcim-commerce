@@ -1,0 +1,58 @@
+{
+    "name": "omnipay/helcim-commerce",
+    "type": "library",
+    "description": "Common components for Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "purchase"
+    ],
+    "homepage": "https://github.com/thephpleague/omnipay-common",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Macneil",
+            "email": "adrian@adrianmacneil.com"
+        },
+        {
+            "name": "Omnipay Contributors",
+            "homepage": "https://github.com/thephpleague/omnipay-common/contributors"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Common\\" : "src/Common" },
+        "classmap": ["src/Omnipay.php"]
+    },
+    "require": {
+        "php": "^5.6|^7",
+        "php-http/client-implementation": "^1",
+        "php-http/message": "^1.5",
+        "php-http/discovery": "^1.2.1",
+        "symfony/http-foundation": "^2.1|^3",
+        "moneyphp/money": "^3.0.5"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3",
+        "php-http/mock-client": "^1",
+        "squizlabs/php_codesniffer": "^2.8.1",
+        "phpro/grumphp": "^0.11.6"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    },
+    "suggest": {
+        "php-http/guzzle6-adapter": "Use the Guzzle adapter to send your requests."
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 src/",
+        "fix-style": "phpcbf -p --standard=PSR2 src/"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
